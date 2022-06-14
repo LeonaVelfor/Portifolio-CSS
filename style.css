@@ -1,0 +1,157 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*conteudo se contente na box*/
+    color: rgb(255, 255, 255);
+    font-family: Helvetica, sans-serif; /*da pra usar a do google fonte*/
+}
+
+ul {
+    list-style: none; /*sem bolinha*/
+    font-style: italic;
+    font-weight: 600;
+}
+
+a{
+    text-decoration: none;/*tirar a decoração do link*/
+}
+
+body{
+    background-image: url(./fundo1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center fixed;
+    background-size: 100vw 100vh;
+  
+}
+
+header{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 8px;
+    border-bottom: 0.1px solid #fff;
+    box-shadow: 0.5px 0.5px 10px 0.5px #fff;
+    /* tambem tem a border bottom ridge (3d)*/
+    /*legal colocar border nos elementos isolados para dar um destaque */
+}
+
+header ul{
+    display: flex;
+}
+
+header ul li{
+    padding: 5px;
+}
+
+header ul li a{
+    transition: 300ms;
+}
+
+header ul li a:hover{
+    color: rgb(220, 81, 255);
+}
+
+.container {
+    text-align: center;
+}
+
+.container .name h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+#arrow{
+    font-size: 30px;
+    cursor: pointer;
+    animation: blink/*nome da animação*/ 0.9s steps(5, start) infinite;
+}
+
+@keyframes blink/*nome dado*/ {
+    to{
+        visibility: hidden;
+    }
+} /* chamando função que criamos no animation*/
+
+#animation {
+    transition: 800ms;
+}
+
+.rotate /*nome da função criada para rodar*/ {
+    transform: rotate(180deg);
+    transition: 800ms;
+}
+
+.active {
+    display:block !important;
+} /*mostrar o p depois de clicar na seta*/
+
+.container .name h5{
+    font-size: 20px;
+}
+
+#about p{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form{
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 30px;
+    /*border: thick double #fff; pra borda dupla. Lembrar de usar padding*/
+}
+
+.form input {
+    width: 70%;
+    padding: 5px 15px;
+    border: none; /*equilibrar o tamanho entre input e o button*/
+    border-radius: 5px 0px 0px 5px;
+}
+
+.form button {
+    width: 15%;
+    padding: 5px 15px;
+    color:black;
+    background: linear-gradient(to right, rgb(220, 81, 255) 50%, rgb(234, 185, 247) 50%); /* animação da hora no botão*/
+    background-size: 200% 100%;/* animação da hora no botão*/
+    background-position: right bottom;/* animação da hora no botão*/
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms ease-out;/* animação da hora no botão*/
+    border-radius: 0px 5px 5px 0px;
+    margin-top: 20px;
+    margin-left: -5px;
+}
+
+.form button:hover {
+    background-position: left bottom;/* animação da hora no botão*/
+    color: white;
+}
+
+
+@media only screen and (max-width:820px){
+   .form{
+        width: 80%;
+   }
+   
+}
+
+
+@media only screen and (max-width:480px){
+    .container .name h1{
+        font-size: 40px;
+    }
+
+    .container .name h5{
+        font-size: 15px;
+    }
+
+    #about p{
+        max-width: 80%;
+        text-align: justify;
+    }
+
+
+
+}

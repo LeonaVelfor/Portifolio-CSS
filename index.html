@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://kit.fontawesome.com/344c39a37e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:.Leona Velfor.:</title>
+</head>
+
+    <header>
+        <div>
+            <img src="Logo1.png" alt="Logo Leona Velfor" width="20%">
+        </div>
+        <ul>
+            <li>
+                <a target="_blank"  href="https://github.com/LeonaVelfor">Github</a>
+            </li>
+            <li>
+                <a target="_blank"  href="https://www.linkedin.com/in/jessica-maria-evangelista/">Linkedin</a>
+            </li>
+            <li>
+                <a target="_blank" href="mailto:jessica.evangelista@aluno.ueg">E-mail</a>
+            </li>
+        </ul>
+        
+    </header>
+
+</body>
+    <main>
+        <section class="container">
+            <div class="name">
+                <h1>Leona Velfor</h1>
+                <h5>Front-End Developer</h5>
+            </div>
+            
+            <div onclick="displayAbout()" id="arrow">
+                <i id="animation" class="fa-solid fa-angles-down"></i>
+            </div>
+
+            <div style="display:none" id="about">
+                <p>
+                    O verdadeiro sábio é aquele que reconhece sua pequinês e compreende que, quanto mais se sabe sobre algo, mais um universo de possibilidades se expande, e de lá surge uma nova infinidade para se aprender! 
+
+                    Situo-me nesta posição de eterna aprendiz, sendo fascinada por tecnologia, marketing, programação, desenvolvimento de estratégias e solução de problemas. 
+
+                    Por cultura, acredito que todos necessitam ter voz no ambiente em que se inserem, pois só assim é possível compreender as dores que cada um carrega e proporcionar a dignidade que todo ser humano precisa para viver.
+
+                    Possuo experiência em vendas, atendimento ao cliente, produção científica, comunicação, produção de conteúdo, programação front-end e back-end.
+
+                    O aprendizado move minha existência, pois, do pouco que sei, sei que posso aprender tudo o que for possível.
+                </p>
+            </div>
+
+            <div class="form">
+                <div>
+                    <p>Deixe seu contato!</p>
+                </div>
+                <form action="">
+                    <input id="text" type="text" placeholder="seu melhor email!">
+                    <button id="button">enviar!</button>
+                </form>
+            </div>     
+        </section>
+    </main>
+
+    <script>
+        function displayAbout(){
+            var arrow = document.getElementById('animation');
+            arrow.classList.toggle('rotate');
+            var display = document.getElementById('about');
+            display.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
