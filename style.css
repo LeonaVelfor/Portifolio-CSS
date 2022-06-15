@@ -16,16 +16,21 @@ a{
     text-decoration: none;/*tirar a decoração do link*/
 }
 
+
+
 body{
-    background-image: url(./fundo1.jpg);
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #524aa7, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #524aa7, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-repeat: no-repeat;
     background-position: center center fixed;
     background-size: 100vw 100vh;
   
-}
+} 
+
 
 header{
-    display:flex;
+    display:block;
     justify-content: space-around;
     align-items: center;
     padding-top: 8px;
@@ -52,12 +57,29 @@ header ul li a:hover{
 }
 
 .container {
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    
 }
 
+
 .container .name h1{
-    font-size: 60px;
-    margin-top: 20px;
+    font-size: 6vw;
+    margin-top: 50vh;
+    
+}
+
+.container .name h5{
+    font-size: 2vw;
+}
+
+.container .name h1, h5{
+    margin-left: 2vw;
+}
+
+.bgpic {
+    width: 45vw;
 }
 
 #arrow{
@@ -85,9 +107,7 @@ header ul li a:hover{
     display:block !important;
 } /*mostrar o p depois de clicar na seta*/
 
-.container .name h5{
-    font-size: 20px;
-}
+
 
 #about p{
     max-width: 600px;
